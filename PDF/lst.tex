@@ -1,0 +1,35 @@
+% Contents of listings-setup.tex
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{pxfonts}
+\doublespacing
+\usepackage[top=10mm, left=1.25in]{geometry}
+
+% Listing Style
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\renewcommand{\ttdefault}{pcr}
+
+\lstdefinestyle{mylststyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\bfseries\color{magenta},
+    numberstyle=\small\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\linespread{0.8}\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=false,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+% Use the listing style we just defined
+\lstset{style=mylststyle}
