@@ -26,7 +26,7 @@ void computeBezPt(GLfloat u, wcPt3D* bezPt, GLint nCtrlPts, wcPt3D* ctrlPts)
 	bezPt->x = bezPt->y = bezPt->z = 0.0;
 
 	for (k = 0; k < nCtrlPts; k++) {
-		bezBlendFcn = nCr(nCtrlPts - 1, k) * pow(u, k) * pow(1 - u, n - k);
+		bezBlendFcn = nCr( n, k ) * pow(u, k) * pow(1 - u, n - k);
 		bezPt->x += ctrlPts[k].x * bezBlendFcn;
 		bezPt->y += ctrlPts[k].y * bezBlendFcn;
 		bezPt->z += ctrlPts[k].z * bezBlendFcn;
